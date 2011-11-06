@@ -3,11 +3,10 @@
 #include <stdio.h>
 int main() {
   int i, tabela[] = {1, 2, 4, 6, 12};
-  while (i<=0)
+  for(i=4; i> -1; i--)
     {
-      i=4;
-       printf("%d\n", tabela[i]);
-       i--;  
-}
-   return 0;
+      printf("%d ,", tabela[i]);
+    }
+  printf("\n");   
+return 0;
 }
