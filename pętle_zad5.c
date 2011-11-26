@@ -2,26 +2,24 @@
 
 int main() {
   /* deklarowanie zmiennych */ 
- int i;
-  int tab[6];
+ float i;
+  float tab[6];
+  float najmniejsza, najwieksza;
   /* wprowadzanie liczb */ 
  printf("Wprowadź 6 liczb całkowitych...\n");
 
  for (i=0; i<=5; ++i)
    {
-     scanf("%d", &tab[i]);
+     scanf("%f", &tab[i]);
    }
- /* wyświetlanie liczb */
- printf("Wprowadzone liczby od początku: \n");
+ /* wyświetlanie najwiekszej i najmniejszej */
  for (i=0; i<=5; ++i)
    {
-     printf("%d\n", tab[i]);
+     if (tab[i]>najwieksza)
+       najwieksza=tab[i];
+     if (tab[i]<najmniejsza)
+       najmniejsza=tab[i];
    }
- printf("Wprowadzone liczby od końca: \n");
-
- for (i=5; i>=0; --i)
-   {
-     printf("%d\n", tab[i]);
-   }
+ printf("najmniejsza= %f, najwieksza= %f\n", najmniejsza,najwieksza);
  return 0;
 }
